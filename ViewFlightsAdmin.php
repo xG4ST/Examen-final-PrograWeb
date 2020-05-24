@@ -1,5 +1,5 @@
 <?php
-include "mysqlConnection";
+include "mysqlConnection.php";
 session_start();
 ?>
 <!DOCTYPE html>

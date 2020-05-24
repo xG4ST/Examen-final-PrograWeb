@@ -94,35 +94,39 @@
 
   <!-- Container (login Section) -->
 <div style="background-image: url('images/flighttoindia.png'); background-size: cover; background-repeat:no-repeat;">
-<form action = "login.php" method = "post">
-<div id="login" class="container-fluid" >
-  <div class="row" >
-        <div class="col-sm-2 form-group">
-			<div class="row">
-			  <h2 class="text-center">Login</h2>
-			</div>
-			<div class="row">
-			  <input class="form-control" id="username" name="username" placeholder="username" type="text" required>
-			</div></br>
-            <div class="row">
-			  <input class="form-control" id="password" name="password" placeholder="password" type="password" required>
-			</div>
+  <fieldset>
+    <form action = "login.php" method = "post">
+    <div id="login" class="container-fluid box">
+      <div>
+            <div>
+          <div>
+            <h2 class="text-center">Login</h2>
+          </div>
+          <div>
+            <input class="form-control" id="username" name="username" placeholder="username" type="text" required>
+          </div></br>
+                <div>
+            <input class="form-control" id="password" name="password" placeholder="password" type="password" required>
+          </div>
+            </div>
+            
+          </div>
+          <div>
+            <div class="form-group">
+              <button class="btn btn-default pull-right" type="submit">Log In</button>
+            </div>
+          </div>
+          
         </div>
-		<div class = "col-sm-8" style="padding-left:60px">
-		<h4><strong>MISSION:</strong><ul><li> To sell the cheapest airline tickets in an increasingly competitive market</li>
-					<li>To assemble the most advanced team of travel experts in the world</li>
-					<li>To maintain an efficient and technologically bullet-proof platform</li>
-					<li>Innovate, don't imitate.</li></ul></h4>
-		</div>
-		
-      </div>
-      <div class="row">
-        <div class="col-sm-2 form-group">
-          <button class="btn btn-default pull-right" type="submit">Log In</button>
-        </div>
-      </div>
-    </div>
-</form>
+      </form>
+  </fieldset>
+
+  <div class = "col-sm-8" style="padding-left:60px">
+  <h4><strong>MISSION:</strong><ul><li> To sell the cheapest airline tickets in an increasingly competitive market</li>
+        <li>To assemble the most advanced team of travel experts in the world</li>
+        <li>To maintain an efficient and technologically bullet-proof platform</li>
+        <li>Innovate, don't imitate.</li></ul></h4>
+  </div>
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
