@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
+CREATE SCHEMA IF NOT EXISTS `airlinereservation` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+USE `airlinereservation` ;
+
 CREATE TABLE IF NOT EXISTS `admin` (
   `UserName` varchar(20) NOT NULL,
   `Password` varchar(20) NOT NULL
