@@ -1,10 +1,11 @@
 <?php
+include "mysqlConnection.php";
 //header("Location: signUp.html");
 session_start();
 $email = $_POST['username'];
 $password = $_POST['password'];
 // connect to the mysql database
-$link = mysqli_connect('localhost', 'root', 'root', 'airlinereservation');
+$link = $con;
 //check if user with same username exists in db
 $sql = "SELECT password, firstname, lastname FROM user WHERE username = '".$email."';";
 echo $sql;

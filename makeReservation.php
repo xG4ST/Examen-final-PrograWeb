@@ -1,4 +1,5 @@
 <?php
+include "mysqlConnection.php";
 session_start();
 $ReservationId = substr(md5(microtime()),rand(0,26),5);
 $onInstance = $_POST['onInstance'];
@@ -75,7 +76,7 @@ if($returnInstance != null)
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Add reservation to reservation table
-$link = mysqli_connect('localhost', 'root', 'root', 'airlinereservation');
+$link = $con;
 $sql1 = "INSERT INTO reservation(ReservationId, Username,InstanceId, ReturnInstanceId) values ('$ReservationId', '$username', '$onInstance', '$returnInstance');";
 $result = mysqli_query($link,$sql1);
 if($result)  

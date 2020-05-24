@@ -1,4 +1,5 @@
 <?php
+include "mysqlConnection.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -61,7 +62,7 @@ session_start();
   {
 	echo ("<h3>Hi ". $_SESSION['user_fname']. "!</h3>");
 	$username = $_SESSION['username'];
-	$link = mysqli_connect('localhost', 'root', 'root', 'airlinereservation');
+	$link = $con;
 	//check if user with same username exists in db
 	$sql = "SELECT r.reservationId, f.flight_no, fi.DepartTime, fi.DepartureDate, fa.cityName, ta.cityName, fi.ArriveTime, fi.ArrivalDate, r.ReturnInstanceId, fi.status FROM reservation r JOIN user u ON r.username = u.UserName JOIN Flight_Instance fi ON r.InstanceId = fi.InstanceId JOIN flight f ON fi.flight_no = f.flight_no JOIN airport fa ON f.from_airport_id = fa.airportId JOIN airport ta ON f.to_airport_id = ta.airportId WHERE u.username = '".$username."';";
 	$result = mysqli_query($link,$sql);

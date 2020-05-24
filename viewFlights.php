@@ -1,4 +1,5 @@
 <?php
+include "mysqlConnection.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -115,7 +116,7 @@ session_start();
   {
 	$fromAirport = $_GET['From'];
 	$toAirport = $_GET['To'];
-	$link = mysqli_connect('localhost', 'root', 'root', 'airlinereservation');
+	$link = $con;
 	//retrieve flights
 	$sql = "SELECT fi.InstanceId, f.flight_no, fi.DepartureDate, fi.DepartTime, fi.ArriveTime, fa.cityName, ta.cityName, fi.Status, fi.fare FROM flight f JOIN flight_Instance fi ON f.flight_no =  fi.Flight_no JOIN Airport ta ON f.to_airport_id = ta.AirportId JOIN Airport fa ON f.from_airport_id = fa.AirportId WHERE fa.cityName = '".$fromAirport."' AND ta.cityName = '".$toAirport."';";
 	$result = mysqli_query($link,$sql);

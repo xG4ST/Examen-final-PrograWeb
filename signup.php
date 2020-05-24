@@ -1,4 +1,5 @@
 <?php
+include "mysqlConnection.php";
 session_start();
 //Retrieve form parameters
 $fname = $_POST['firstname'];
@@ -8,7 +9,7 @@ $password = $_POST['password'];
 $bdate = $_POST['birthdate'];
 echo $fname. " ". $lname. " ". $email. " ". $password. " ". $bdate[2];
 // connect to the mysql database
-$link = mysqli_connect('localhost', 'root', 'root', 'airlinereservation');
+$link = $con;
 //check if user with same username exists in db
 $sql = "SELECT * FROM user WHERE username = '".$email."';";
 $result = mysqli_query($link,$sql);

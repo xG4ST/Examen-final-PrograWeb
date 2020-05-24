@@ -1,4 +1,5 @@
 <?php 
+include "mysqlConnection.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -62,10 +63,7 @@ session_start();
 </div>
 -->
 
-<?php
-
-$con= mysqli_connect("localhost","root","root","AirlineReservation");
-	
+<?php	
 	if(!$con){
 		die("Connection failed : ".mysqli_connect_error());
 	}

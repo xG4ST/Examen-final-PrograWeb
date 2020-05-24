@@ -1,4 +1,5 @@
 <?php
+include "mysqlConnection";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -53,7 +54,7 @@ session_start();
 <!--List reservations-->
 <div id="services" class="container-fluid text-center">
  <?php
- 	$link = mysqli_connect('localhost', 'root', 'root', 'airlinereservation');
+ 	$link = $con;
 	//retrieve flights
 	$sql = "SELECT fi.InstanceId, f.flight_no, fi.DepartureDate, fi.DepartTime, fi.ArriveTime, ta.cityName, fa.cityName FROM flight f JOIN flight_Instance fi ON f.flight_no =  fi.Flight_no JOIN Airport ta ON f.from_airport_id = ta.AirportId JOIN Airport fa ON f.to_airport_id = fa.AirportId;";
 	$result = mysqli_query($link,$sql);
