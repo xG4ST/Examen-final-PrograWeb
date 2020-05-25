@@ -78,27 +78,27 @@ session_start();
  </select>
 
  <select name="From" class="form-control" placeholder="From" required>
-    <option value="Nuevo Leon">Nuevo Leon</option>
-    <option value="Tamaulipas">Tamaulipas</option>
-    <option value="Jalisco">Jalisco</option>
-    <option value="Cdmx">Cdmx</option>
-    <option value="Cáncun">Cáncun</option>
-    <option value="Sinaloa">Sinaloa</option>
-    <option value="Baja California">Baja California</option>
-    <option value="Estado de Hidalgo">Estado de Hidalgo</option>
-    <option value="Veracruz">Veracruz</option>
-
-
-	
-  </select>
-   <select name="To" class="form-control"  placeholder="To" required>
     <option value="Monterrey">Monterrey</option>
     <option value="Ciudad Victoria">Ciudad Victoria</option>
-    <option value="Guadalajara"> Guadalajara</option>
+    <option value="Guadalajara">Guadalajara</option>
     <option value="Cdmx">Cdmx</option>
 	  <option value="Quintana Roo">Quintana Roo</option>
     <option value="Culiacán">Culiacán</option>
     <option value="Mexicali">Mexicali</option>
+    <option value="Pachuca">Pachuca</option>
+    <option value="Veracruz">Veracruz</option>	
+    
+  </select>
+
+   <select name="To" class="form-control"  placeholder="To" required>
+    <option value="Monterrey">Monterrey</option>
+    <option value="Ciudad Victoria">Ciudad Victoria</option>
+    <option value="Guadalajara">Guadalajara</option>
+    <option value="Cdmx">Cdmx</option>
+	  <option value="Quintana Roo">Quintana Roo</option>
+    <option value="Culiacán">Culiacán</option>
+    <option value="Mexicali">Mexicali</option>
+    <option value="Pachuca">Pachuca</option>
     <option value="Veracruz">Veracruz</option>
 
   </select>

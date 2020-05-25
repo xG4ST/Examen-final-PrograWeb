@@ -66,7 +66,7 @@ session_start();
 			 </tr>
 			 <tr>
 			<td><label for = "fromCity">De la ciudad: </label><input class="form-control" name="fromCity" id = "fromCity" placeholder="De la ciudad"  /> </td>
-            <td> <label for = "toCity">A la ciudady: </label><input class="form-control" name="toCity" id= "toCity" placeholder="A la ciudad"  /></td>
+            <td> <label for = "toCity">A la ciudad: </label><input class="form-control" name="toCity" id= "toCity" placeholder="A la ciudad"  /></td>
 			 </tr>
 			 <tr>
 			<td><label for = "fromState">Del estado: </label><input class="form-control" name="fromState" id = "fromState" placeholder="Del estado"  /> </td>
