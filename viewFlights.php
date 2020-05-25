@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>JustFly - The easiest way to fly</title>
+  <title>Vuelos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,8 +33,8 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="viewFligths.php">FLIGHTS</a></li>
+        <li><a href="home.html">INICIO</a></li>
+        <li><a href="viewFlights.php">VUELOS</a></li>
 		<?php
 		if(isset($_SESSION['user_fname']))
 		{
@@ -43,8 +43,8 @@ session_start();
 		}
 		else
 		{
-			echo('<li><a href="loginPage.php">LOG IN</a></li>');
-			echo('<li><a href="signUp.html">SIGN UP</a></li>');
+			echo('<li><a href="loginPage.php">INICIAR SESIÓN</a></li>');
+			echo('<li><a href="signUp.html">REGISTRARSE</a></li>');
 		}
 		?>
       </ul>
@@ -56,15 +56,14 @@ session_start();
 <div class="jumbotron text-center">
 <form action="viewFlights.php">
 <div class="container">
-   
-
-  <h1>Just Fly </h1>
-  <p>Where would you like to fly??</p>
+  
+  <h1>Fime Vuela</h1>
+  <p>¿Dónde te gustaría volar?</p>
     <label class="radio-inline">
-      <input type="radio" name="optradio" value="roundtrip">Round Trip
+      <input type="radio" name="optradio" value="roundtrip">Ida y vuelta
     </label>
     <label class="radio-inline">
-      <input type="radio" name="optradio" value="oneway">One way
+      <input type="radio" name="optradio" value="oneway">Un vuelo
     </label>
 </div>
   <br>
@@ -96,7 +95,7 @@ session_start();
 	<option value="New York">New York</option>
 
   </select>
-  <button type="submit" class="btn btn-danger">Search Flights</button>
+  <button type="submit" class="btn btn-danger">Buscar vuelos</button>
 </div>
 </form>
 <?php
@@ -175,7 +174,7 @@ session_start();
 	}
 	else
 	{
-		echo("We are sorry! We do not have any return flights for this route.");
+		echo("¡Lo sentimos! No tenemos vuelos de regreso para esta ruta..");
 		//echo ($sql1);
 	}
 	
@@ -183,17 +182,17 @@ session_start();
   }
   else
   {
-	echo("Please select where you would like to fly.");  
+	echo("Por favor seleccione a dónde le gustaría volar.");  
   }
   ?>
-  <button id="bookFlights">Book Flight</button>
+  <button id="bookFlights">Reservar un vuelo</button>
 </div>
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>&copy; Just Fly. All Rights Reserved </p>
+  <p></p>
 </footer>
 <script>
 $(document).ready(function(){

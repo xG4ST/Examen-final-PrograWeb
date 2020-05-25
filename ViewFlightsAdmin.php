@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>JustFly - The easiest way to fly</title>
+  <title>JustFly - La forma más fácil de volar</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,16 +33,16 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">HOME</a></li>
+        <li><a href="home.html">INICIO</a></li>
 		<?php
 		if(isset($_SESSION['admin_email']))
 		{
-			echo("<li><a href='updateFlightsPage.php'>UPDATE FLIGHTS</a></li>");
-			echo("<li><a href='AdminLogout.php'>LOG OUT</a></li>");			
+			echo("<li><a href='updateFlightsPage.php'>ACTUALIZAR VUELOS</a></li>");
+			echo("<li><a href='AdminLogout.php'>CERRAR SESIÓN</a></li>");			
 		}
 		else
 		{
-			echo('<li><a href="Admin_signInPage.php">LOG IN</a></li>');
+			echo('<li><a href="Admin_signInPage.php">INICIAR SESIÓN</a></li>');
 		}
 		?>
       </ul>
@@ -74,14 +74,14 @@ session_start();
 	}
  
   ?>
-  <button id="cancelFlights">Cancel Flight</button>
+  <button id="cancelFlights">Cancelar vuelo</button>
 </div>
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+
 </footer>
 <script>
 $(document).ready(function(){

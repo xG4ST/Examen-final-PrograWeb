@@ -26,19 +26,19 @@ if (mysqli_num_rows($result6)>0)
 				}
 				if($availability-$guests < 0)
 				{
-					$_SESSION['error_msg'] = "Sorry there are not enough seats available on the flight that you selected";
+					$_SESSION['error_msg'] = "Lo sentimos, no hay suficientes asientos disponibles en el vuelo que seleccionó";
 					header("Location: 'errorPage.php'");
 				}
 				
 			}
 			else
 			{
-				echo("Sorry, we are unable to fetch  total_seat information for this flight");
+				echo("Lo sentimos, no podemos obtener la información total del asiento para este vuelo");
 			} 
 echo("Availabiltiy: $availability Guests: $guests  ");
 $sql7 = "UPDATE available_seats SET Availability = '".($availability - $guests) ."' WHERE InstanceId = $onInstance AND CategoryId = '$category';";
-echo("Number of guests: ".$guests." ");
-echo ( "Insert availability: ".$sql7 );	
+echo("Número de invitados: ".$guests." ");
+echo ( "Insertar disponibilidad: ".$sql7 );	
 $result7 = mysqli_query($link,$sql7);
 
 // Add seats for the return flight
@@ -52,25 +52,25 @@ if($returnInstance != null)
 				{
 					while(($row = mysqli_fetch_row($result6))!=null)
 					{    
-						echo "Total_seats are : " ;
+						echo "Asientos totales son : " ;
 						echo("$row[0] <br />");
 						$availability = intval($row[0]);
 					}
 					if($availability-$guests < 0)
 					{
-						$_SESSION['error_msg'] = "Sorry there are not enough seats available on the flight that you selected";
+						$_SESSION['error_msg'] = "Lo sentimos, no hay suficientes asientos disponibles en el vuelo que seleccionó";
 						header("Location: 'errorPage.php'");
 					}
 					
 				}
 				else
 				{
-					echo("Sorry, we are unable to fetch  total_seat information for this flight");
+					echo("Lo sentimos, no podemos obtener la información total del asiento para este vuelo");
 				} 
-	echo("Availabiltiy: $availability Guests: $guests  ");
+	echo("Disponible: $availability Guests: $guests  ");
 	$sql7 = "UPDATE available_seats SET Availability = '".($availability - $guests) ."' WHERE InstanceId = $returnInstance AND CategoryId = '$category';";
-	echo("Number of guests: ".$guests." ");
-	echo ( "Insert availability: ".$sql7 );	
+	echo("Número de invitados:".$guests." ");
+	echo ( "Insertar disponibilidad: ".$sql7 );	
 	$result7 = mysqli_query($link,$sql7);
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,12 +81,12 @@ $sql1 = "INSERT INTO reservation(ReservationId, Username,InstanceId, ReturnInsta
 $result = mysqli_query($link,$sql1);
 if($result)  
 {
-	echo("Insertion was succesful into Reservation");	
+	echo("La inserción fue exitosa en la reserva");	
 }
 else
 {
 	echo "$sql1";
-	echo("Sorry we are unable to make a reservation at this time");
+	echo("Lo sentimos, no podemos hacer una reserva en este momento");
 }
 //Add passenger to passenger table
 for($i=1; $i<=$guests; $i++)
@@ -104,13 +104,13 @@ for($i=1; $i<=$guests; $i++)
 	$result = mysqli_query($link,$sql2);
 	if($result)  
 	{
-		echo("Insertion was succesful into Passenger");
+		echo("La inserción fue exitosa en el pasajero");
        // echo "passenger : $i";		
 	}
 	else
 	{
 		echo "$sql2";
-		echo("Sorry we are unable to make a reservation at this time");
+		echo("Lo sentimos, no podemos hacer una reserva en este momento");
 	}
 	
 	// Adding reservations to the passenger_reservation table
@@ -119,12 +119,12 @@ for($i=1; $i<=$guests; $i++)
 	if($result4)  
 	{
 		
-		echo("Insertion was succesful into Passenger_reservation");	
+		echo("La inserción fue exitosa en la Reserva de Pasajeros");	
 	}
 	else
 	{
 		echo "$sql4";
-		echo("Sorry we are unable to make a reservation at this time");
+		echo("Lo sentimos, no podemos hacer una reserva en este momento");
 	}
 	
 	
@@ -145,7 +145,7 @@ for($i=1; $i<=$guests+1 ; $i++)
 	else
 	{
 		//echo "$sql2";
-		echo("Sorry we are unable to make a reservation at this time");
+		echo("Lo sentimos, no podemos hacer una reserva en este momento");
 	}
 // Add seats_reservation to the table
 $sql5 = "INSERT INTO seats_reservation(Seat_no, ReservationId) values ('$Seat_no', '$ReservationId');";	
@@ -154,12 +154,12 @@ $result2 = mysqli_query($link,$sql5);
 	{
 		echo "$i";
 		//echo "$sql3";
-		echo("Insertion was succesful into Seats_Reservation");	
+		echo("La inserción fue exitosa en la reserva de asientos");	
 	}
 	else
 	{
 		echo "$sql5";
-		echo("Sorry we are unable to make a reservation at this time");
+		echo("Lo sentimos, no podemos hacer una reserva en este momento");
 	}
 }	
 //If 2 way journey, add return flight seats
@@ -189,12 +189,12 @@ if($returnInstance !=null)
 		{
 			echo "$i";
 			//echo "$sql3";
-			echo("Insertion was succesful into Seats_Reservation");	
+			echo("La inserción fue exitosa en la reserva de asientos");	
 		}
 		else
 		{
 			echo "$sql5";
-			echo("Sorry we are unable to make a reservation at this time");
+			echo("Lo sentimos, no podemos hacer una reserva en este momento");
 		}
 	}
 }

@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 <head>
   
-  <title>Error Page</title>
+  <title>Página de error</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -35,13 +35,13 @@ session_start();
 		<?php
 		if(isset($_SESSION['user_fname']))
 		{
-			echo("<li><a href='viewReservations.php'>RESERVATIONS</a></li>");
-			echo("<li><a href='logout.php'>LOG OUT</a></li>");			
+			echo("<li><a href='viewReservations.php'>RESERVACIONES</a></li>");
+			echo("<li><a href='logout.php'>CERRAR SESIÓN</a></li>");			
 		}
 		else
 		{
-			echo('<li><a href="loginPage.php">LOG IN</a></li>');
-			echo('<li><a href="signUp.html">SIGN UP</a></li>');
+			echo('<li><a href="loginPage.php">INICIAR SESIÓN</a></li>');
+			echo('<li><a href="signUp.html">REGISTRARSE</a></li>');
 		}
 		?>
       </ul>
@@ -53,7 +53,7 @@ session_start();
  <div class="jumbotron text-center" >
 <h1>Success </h1>
   <?php
-	echo("Your booking was successful!<br><a href = 'viewReservations.php'>View Reservations</a>");
+	echo("Nuestra reserva fue exitosa!<br><a href = 'viewReservations.php'>Ver reservas</a>");
   ?>
  </div> 
 
@@ -61,7 +61,7 @@ session_start();
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>&copy; Just Fly. All Rights Reserved </p>
+
 </footer>
 </body>
 </html>

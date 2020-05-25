@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 <head>
   
-  <title>Just Fly | Error</title>
+  <title>Error</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,11 +30,11 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="#services">FLIGHTS</a></li>
-        <li><a href="viewReservations.php">RESERVATIONS</a></li>
-        <li><a href="loginPage.php">LOG IN</a></li>
-        <li><a href="signUp.html">SIGN UP</a></li>
+        <li><a href="home.html">INICIO</a></li>
+        <li><a href="#services">VUELOS</a></li>
+        <li><a href="viewReservations.php">RESERVACIONES</a></li>
+        <li><a href="loginPage.php">INICIAR SESIÓN</a></li>
+        <li><a href="signUp.html">REGISTRARSE</a></li>
       </ul>
     </div>
   </div>
@@ -54,12 +54,6 @@ session_start();
  </div>   
 </div>
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>&copy; Just Fly. All Rights Reserved </p>
-</footer>
 
 </body>
 </html>

@@ -12,7 +12,7 @@ echo($fname." ".$lname ." ".$dob. " ". $guests );
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Just Fly | Passenger Information</title>
+  <title>Información del pasajero</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,18 +37,18 @@ echo($fname." ".$lname ." ".$dob. " ". $guests );
     </div>
  <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="viewFligths.php">FLIGHTS</a></li>
+        <li><a href="home.html">INICIO</a></li>
+        <li><a href="viewFligths.php">VUELOS</a></li>
 		<?php
 		if(isset($_SESSION['user_fname']))
 		{
-			echo("<li><a href='viewReservations.php'>RESERVATIONS</a></li>");
-			echo("<li><a href='logout.php'>LOG OUT</a></li>");			
+			echo("<li><a href='viewReservations.php'>rRESERVACIONES</a></li>");
+			echo("<li><a href='logout.php'>Cerrar </a></li>");			
 		}
 		else
 		{
-			echo('<li><a href="loginPage.php">LOG IN</a></li>');
-			echo('<li><a href="signUp.html">SIGN UP</a></li>');
+			echo('<li><a href="loginPage.php">Iniciar sesión</a></li>');
+			echo('<li><a href="signUp.html">REGÍSTRATE</a></li>');
 		}
 		?>
       </ul>
@@ -58,18 +58,18 @@ echo($fname." ".$lname ." ".$dob. " ". $guests );
 
 <!--Login-->
 <div class="jumbotron text-center">
-<h1>Passenger Information </h1>
+<h1>Información del pasajero </h1>
 			<div class="row">
 			<form action="makeReservation.php" method="post" class="form" role="form">
 			<!-- Send flight instance, number of guests, category to reservation page -->
 			<input type="hidden" name="redirurl" value="<? echo $_SERVER['HTTP_REFERER']; ?>" />
-			<p>Primary Traveller</p>
+			<p>Viajero primario</p>
 			<div class="col-xs-4 col-xs-offset-4">
 			<select name="mealpref" class="form-control" placeholder="Meal Preference">
-				<option value="Vegetarian">Vegetarian</option>
-				<option value="Vegan">Vegan</option>
-				<option value="NonVegetarian">Non-Vegetarian</option>
-				<option value="GlutenFree">Gluten Free</option>
+				<option value="Vegetarian">Vegetariano</option>
+				<option value="Vegan">Vegano</option>
+				<option value="NonVegetarian">No vegetariano</option>
+				<option value="GlutenFree">Sin gluten</option>
 			</select>
 			</div>
 			<br />
@@ -77,20 +77,20 @@ echo($fname." ".$lname ." ".$dob. " ". $guests );
 			<?php
 				for ($i = 1; $i <= $guests; $i++) {
 			?>
-			 <label for = "firstname">Traveller: <?echo $i?> </label>
+			 <label for = "firstname">Viajero: <?echo $i?> </label>
 				<div  class = "form-inline">
-					<input class="form-control" name="firstname<?echo($i)?>" id = "firstname" placeholder="First Name" type="text" required autofocus />
-                    <input class="form-control" name="lastname<?echo($i)?>" id = "lastname" placeholder="Last Name" type="text" required />
+					<input class="form-control" name="firstname<?echo($i)?>" id = "firstname" placeholder="Nombre" type="text" required autofocus />
+                    <input class="form-control" name="lastname<?echo($i)?>" id = "lastname" placeholder="Contraseña" type="text" required />
 				</div>
 			<br/>
 			<div  class = "form-inline">
-			<select name="mealpref<? echo($i) ?>" class="form-control" placeholder="Meal Preference">
-				<option value="Vegetarian">Vegetarian</option>
-				<option value="Vegan">Vegan</option>
-				<option value="NonVegetarian">Non-Vegetarian</option>
-				<option value="GlutenFree">Gluten Free</option>
+			<select name="mealpref<? echo($i) ?>" class="form-control" placeholder="Preferencia de comida">
+				<option value="Vegetarian">Vegetariano</option>
+				<option value="Vegan">Vegano</option>
+				<option value="NonVegetarian">Non-vegetariano</option>
+				<option value="GlutenFree">Sin Gluten </option>
 			</select>
-			<input class="form-control" name="age<? echo($i)?>" id = "age" placeholder="Age" type="text" required />
+			<input class="form-control" name="age<? echo($i)?>" id = "age" placeholder="Edad" type="text" required />
 				</div>
 			
 			<?php
@@ -107,7 +107,7 @@ echo($fname." ".$lname ." ".$dob. " ". $guests );
 			<div class = "row" style="text-align:'center'">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Confirm Booking</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Reserva confirmada</button>
 			</div>
 			</div>
 			
@@ -121,7 +121,7 @@ echo($fname." ".$lname ." ".$dob. " ". $guests );
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>&copy; Just Fly. All Rights Reserved </p>
+
 </footer>
 
 

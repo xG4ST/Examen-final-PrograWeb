@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
   
-  <title>Just Fly - Cancel Flight</title>
+  <title>Cancelar vuelo</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,17 +33,17 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">HOME</a></li>
+        <li><a href="home.html">INICIO</a></li>
 		
 		<?php
 		if(isset($_SESSION['admin_email']))
 		{
-			echo("<li><a href='updateFlightsPage.php'>UPDATE FLIGHTS</a></li>");
-			echo("<li><a href='AdminLogout.php'>LOG OUT</a></li>");			
+			echo("<li><a href='updateFlightsPage.php'>ACTUALIZAR VUELOS</a></li>");
+			echo("<li><a href='AdminLogout.php'>CERRAR SESIÓN</a></li>");			
 		}
 		else
 		{
-			echo('<li><a href="Admin_signInPage.php">LOG IN</a></li>');
+			echo('<li><a href="Admin_signInPage.php">INICIAR SESIÓN</a></li>');
 		}
 		?>
       </ul>
@@ -71,10 +71,10 @@ $flight_instance = $_POST['id1'];
 $flight_no = $_POST['id2'];
     echo "
             <script type=\"text/javascript\">
-           var r = confirm('Are you sure you want to delete the Flight and corresponding Flight Instance?');
+           var r = confirm('¿Está seguro de que desea eliminar el vuelo y la instancia de vuelo correspondiente?');
            if(r == true)
            {
-           		document.write('<center><h1>Flight# '+ $flight_instance + ' has been cancelled'); 		
+           		document.write('<center><h1>Vuelo# '+ $flight_instance + ' ha sido cancelado'); 		
            }
             </script>
         ";
@@ -87,7 +87,7 @@ $flight_no = $_POST['id2'];
         if (mysqli_query($con, $sql1) && mysqli_query($con, $sql2)) 
         {
 		?>
-        	<p><h4><a href='updateFlightsPage.php'> Add or View flight</a></h4></p>
+        	<p><h4><a href='updateFlightsPage.php'> Agregar o ver vuelo</a></h4></p>
 		</div>
         <?php
 		}

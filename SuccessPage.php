@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 <head>
   
-  <title>Just Fly - Success</title>
+  <title>Éxito</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -31,16 +31,16 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">HOME</a></li>
+        <li><a href="home.html">INICIO</a></li>
 		<?php
 		if(isset($_SESSION['admin_email']))
 		{
-			echo("<li><a href='updateFlightsPage.php'>UPDATE FLIGHTS</a></li>");
-			echo("<li><a href='AdminLogout.php'>LOG OUT</a></li>");			
+			echo("<li><a href='updateFlightsPage.php'>ACTUALIZAR VUELOS</a></li>");
+			echo("<li><a href='AdminLogout.php'>CERRAR SESIÓN</a></li>");			
 		}
 		else
 		{
-			echo('<li><a href="Admin_signInPage.php">LOG IN</a></li>');
+			echo('<li><a href="Admin_signInPage.php">INICIAR SESIÓN</a></li>');
 		}
 		?>
       </ul>
@@ -48,8 +48,8 @@ session_start();
   </div>
 </nav>
 <div class="jumbotron text-center">
-<h1> Flight add successful!</h1>
-<p><a href="updateFlightsPage.php">Add or view a flight</a></p>
+<h1> ¡Vuelo agregado exitoso!</h1>
+<p><a href="updateFlightsPage.php">Agregar o ver un vuelo</a></p>
 
 </div>
 </body>

@@ -35,7 +35,7 @@
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-sm-offset-4 col-xs-offset-2 col-md-offset-4" >
-           <h1> Flight has been canceled </h1>
+           <h1> El vuelo ha sido cancelado </h1>
         </div>
  </div>   
 </div>

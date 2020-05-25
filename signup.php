@@ -16,7 +16,7 @@ $result = mysqli_query($link,$sql);
 
 if(mysqli_fetch_row($result)!=null)
 {
-	$_SESSION['error_msg'] =  "User with this username already exists. Please sign up with a different username";
+	$_SESSION['error_msg'] =  "Ya existe un usuario con el mismo nombre. Por favor regístrese con un nombre de usuario diferente";
 	header("Location: errorPage.php");
 	session_write_close();
 }
@@ -31,7 +31,7 @@ $result = mysqli_query($link,$sql);
 // die if SQL statement failed
 if (!$result){ 
 	//echo("SQL Error");
-	$_SESSION['error_msg'] = "There was a problem while signing up. Please try again.";
+	$_SESSION['error_msg'] = "Hubo un problema al registrarse. Inténtalo de nuevo.";
 	header("Location: errorPage");
   die(mysqli_error());
 }

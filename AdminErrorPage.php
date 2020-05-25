@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 <head>
   
-  <title>Error Page</title>
+  <title>Error </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,9 +39,9 @@ session_start();
 	  $error_message = $_SESSION['error_msg'];
   }
   else
-	  $error_message = "An error occured on the previous page";
+	  $error_message = "Se produjo un error en la página anterior.";
   echo "<h3>". $error_message. "</h3>";
-  echo "<a href='Admin_signInPage.php'>Try Again</a>";
+  echo "<a href='Admin_signInPage.php'>Inténtalo de nuevo</a>";
   ?>
  </div>   
 </div>

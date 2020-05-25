@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-  <title>Just Fly - Update Flights</title>
+  <title>Actualizar vuelos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,16 +29,16 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">HOME</a></li>
+        <li><a href="home.html">INICIO</a></li>
 		<?php
 		if(isset($_SESSION['admin_email']))
 		{
-			echo("<li><a href='updateFlightsPage.php'>UPDATE FLIGHTS</a></li>");
-			echo("<li><a href='AdminLogout.php'>LOG OUT</a></li>");			
+			echo("<li><a href='updateFlightsPage.php'>ACTUALIZAR VUELOS</a></li>");
+			echo("<li><a href='AdminLogout.php'>CERRAR SESIÓN</a></li>");			
 		}
 		else
 		{
-			echo('<li><a href="Admin_signInPage.php">LOG IN</a></li>');
+			echo('<li><a href="Admin_signInPage.php">INICIAR SESIÓN</a></li>');
 		}
 		?>
       </ul>
@@ -53,13 +53,13 @@ if(!isset($_SESSION['admin_email']))
 	header("Location : Admin_signInPage.php");
 }
 ?>
-<h1> What would you like to do?</h1>
+<h1> ¿Qué te gustaría hacer?</h1>
 <form action="AddFlights.php" class="form-inline" method="POST" >
-  <button type="button" class="btn btn-danger"><a id="aa" href="AddFlightsPage.php">Add Flights</a></button>
+  <button type="button" class="btn btn-danger"><a id="aa" href="AddFlightsPage.php">Agregar vuelos</a></button>
 </form>
 </br>
 <form  class="form-inline" >
-  <button type="button" class="btn btn-danger"><a id="aa" href="ViewFlightsAdmin.php">View Flights</a></button>
+  <button type="button" class="btn btn-danger"><a id="aa" href="ViewFlightsAdmin.php">Ver vuelos</a></button>
 </form>
 </div>
 </body>
