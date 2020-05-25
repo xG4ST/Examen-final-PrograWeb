@@ -103,7 +103,7 @@ session_start();
   {
 	$fromAirport = $_GET['From'];
 	$toAirport = $_GET['To'];
-	echo("<h3>Showing flights from ".$fromAirport." to ".$toAirport."</h3>");
+	echo("<h3> Mostrando vuelos desde ".$fromAirport." to ".$toAirport."</h3>");
   }
   ?>
 </div>
@@ -146,7 +146,7 @@ session_start();
 	}
 	else
 	{
-		echo("We are sorry! We do not have any onward flights for this route.");
+		echo("¡Lo sentimos! No tenemos vuelos hacia adelante para esta ruta.");
 		//echo ($sql);
 	}
 	
