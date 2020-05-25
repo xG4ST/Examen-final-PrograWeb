@@ -112,7 +112,7 @@ session_start();
 	}
 	else
 	{
-		echo("Currently you have no reservations.");
+		echo("Actualmente no tienes reservaciones.");
 		//echo ($sql);
 	}
   }
