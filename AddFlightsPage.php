@@ -35,8 +35,8 @@ session_start();
 		<?php
 		if(isset($_SESSION['admin_email']))
 		{
-			echo("<li><a href='updateFlightsPage.php'>UPDATE FLIGHTS</a></li>");
-			echo("<li><a href='AdminLogout.php'>LOG OUT</a></li>");			
+			echo("<li><a href='updateFlightsPage.php'>ACTUALIZAR VUELOS</a></li>");
+			echo("<li><a href='AdminLogout.php'>CERRAR SESIÓN</a></li>");			
 		}
 		else
 		{
